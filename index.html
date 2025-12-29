@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИИ — друг или враг?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Title Slide - HOOK with stickers -->
+        <section class="slide active" data-slide="1">
+            <div class="slide-content title-slide chaos-slide">
+                <div class="main-title-container">
+                    <!-- Stickers positioned relative to title -->
+                    <div class="sticker sticker-1" style="--delay: 0.1s; --rotate: -8deg;">
+                        <span>Программист — вымирающий вид? 🦖</span>
+                    </div>
+                    <div class="sticker sticker-2" style="--delay: 0.2s; --rotate: 5deg;">
+                        <span>Паниковать или адаптироваться? 🤔</span>
+                    </div>
+                    <div class="sticker sticker-3" style="--delay: 0.3s; --rotate: -4deg;">
+                        <span>Как теперь работать? 💼</span>
+                    </div>
+                    <div class="sticker sticker-4" style="--delay: 0.4s; --rotate: 7deg;">
+                        <span>ИИ пишет код лучше? 🤖</span>
+                    </div>
+                    <div class="sticker sticker-5" style="--delay: 0.5s; --rotate: -6deg;">
+                        <span>Junior — всё? ⚰️</span>
+                    </div>
+                    <div class="sticker sticker-6" style="--delay: 0.6s; --rotate: 3deg;">
+                        <span>Нас всех заменят? 😱</span>
+                    </div>
+                    <div class="sticker sticker-7" style="--delay: 0.7s; --rotate: -3deg;">
+                        <span>Курсы больше не нужны? 📚</span>
+                    </div>
+                    <div class="sticker sticker-8" style="--delay: 0.8s; --rotate: 6deg;">
+                        <span>Кто кого: 🤖 vs 👨‍💻</span>
+                    </div>
+                    
+                    <div class="emoji-duo">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/robot_1f916.png" alt="robot" class="emoji-3d large">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/handshake_1f91d.png" alt="handshake" class="emoji-3d medium floating">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/person-fencing_1f93a.png" alt="fight" class="emoji-3d medium floating" style="animation-delay: 0.5s;">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/technologist_1f9d1-200d-1f4bb.png" alt="developer" class="emoji-3d large">
+                    </div>
+                    <h1 class="main-title">ИИ — друг или враг?</h1>
+                    <p class="subtitle">Как разработчикам работать эффективнее, а бизнесу — бежать быстрее</p>
+                    <div class="author-info">
+                        <span class="author-name">Константин Штыков</span>
+                        <span class="author-company">CARBOX</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Problem -->
+        <section class="slide" data-slide="2">
+            <div class="slide-content simple-story-slide">
+                <div class="story-intro">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/eyes_1f440.png" alt="eyes" class="emoji-3d large">
+                    <h2>Я увидел проблему</h2>
+                    <p class="story-subtitle">У знакомого интернет-магазин техники</p>
+                </div>
+                
+                <div class="story-two-columns">
+                    <!-- Left: Quote -->
+                    <div class="story-problem">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/tired-face_1f62b.png" alt="tired" class="emoji-3d medium">
+                        <blockquote class="problem-quote">
+                            "Клиенты пишут в мессенджеры, а я не успеваю отвечать. Пока отвечаю одному — другие уходят..."
+                        </blockquote>
+                    </div>
+                    
+                    <!-- Right: Chat mockup -->
+                    <div class="chat-mockup">
+                        <div class="chat-header">
+                            <span class="chat-title">💬 Входящие сообщения</span>
+                            <span class="chat-badge">12</span>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="chat-msg">Здравствуйте, iPhone 15 есть в наличии?</div>
+                            <div class="chat-msg">Сколько стоит доставка в Москву?</div>
+                            <div class="chat-msg">Можно оплатить картой?</div>
+                            <div class="chat-msg angry">Алло! Почему не отвечаете?? 😠</div>
+                            <div class="chat-msg">Есть гарантия на технику?</div>
+                            <div class="chat-msg angry">Ухожу к конкурентам, раз вам не нужны клиенты!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-result">
+                    <span class="result-icon">💸</span>
+                    <span class="result-text">Потерянные клиенты = потерянные деньги</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Idea -->
+        <section class="slide" data-slide="3">
+            <div class="slide-content idea-slide">
+                <h2 class="section-title">Как решить проблему?</h2>
+                
+                <div class="solutions-compare">
+                    <div class="solution-card solution-bad solution-worst">
+                        <div class="solution-icon">👨‍💼</div>
+                        <h3>Нанять менеджера</h3>
+                        <ul class="solution-cons">
+                            <li>❌ 50-80к в месяц</li>
+                            <li>❌ Нужно обучать</li>
+                            <li>❌ Ночью не работает</li>
+                            <li>❌ Болеет, увольняется</li>
+                        </ul>
+                        <div class="solution-reject">Дорого и неэффективно</div>
+                    </div>
+                    
+                    <div class="solution-card solution-bad">
+                        <div class="solution-icon">🤖</div>
+                        <h3>Чат-бот с кнопками</h3>
+                        <ul class="solution-cons">
+                            <li>❌ Тупой, не понимает контекст</li>
+                            <li>❌ Клиенты бесятся</li>
+                            <li>❌ Только простые сценарии</li>
+                            <li>❌ Нет персонализации</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-card solution-good">
+                        <div class="solution-icon">🧠</div>
+                        <h3>ИИ-агент</h3>
+                        <ul class="solution-pros">
+                            <li>✅ Понимает контекст</li>
+                            <li>✅ Отвечает как человек</li>
+                            <li>✅ Работает 24/7</li>
+                            <li>✅ Знает данные бизнеса</li>
+                        </ul>
+                        <div class="solution-highlight">💡 Вот оно!</div>
+                    </div>
+                </div>
+                
+                <p class="idea-conclusion">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/light-bulb_1f4a1.png" alt="idea" class="emoji-3d small inline-emoji">
+                    Так родилась идея <strong>AI Seller</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 4: Challenge -->
+        <section class="slide" data-slide="4">
+            <div class="slide-content challenge-slide">
+                <div class="challenge-icon">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/fire_1f525.png" alt="fire" class="emoji-3d large">
+                </div>
+                <h2 class="challenge-title">Я сделал себе вызов</h2>
+                <div class="challenge-text">
+                    <p>Решил создать пет-проект и проверить:</p>
+                    <blockquote class="challenge-quote">
+                        "Готов ли ИИ работать, пока я просто дирижирую?"
+                    </blockquote>
+                </div>
+                <div class="challenge-roles">
+                    <div class="role-card">
+                        <span class="role-emoji">🤖</span>
+                        <span class="role-text">ИИ пишет код</span>
+                    </div>
+                    <div class="role-card">
+                        <span class="role-emoji">🎼</span>
+                        <span class="role-text">Я дирижирую</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder slides - to be filled later -->
+        
+        <!-- Spoiler: Result -->
+        <section class="slide" data-slide="5">
+            <div class="slide-content spoiler-slide">
+                <div class="spoiler-label">Спойлер</div>
+                <h2 class="spoiler-title">Проект реализован!</h2>
+                
+                <div class="spoiler-product">
+                    <div class="product-logo">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/robot_1f916.png" alt="robot" class="emoji-3d large">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">AI Seller</h3>
+                        <p class="product-tagline">ИИ-агент для автоматизации продаж в мессенджерах</p>
+                        <a href="https://ai-seller.shtikoff.ru" target="_blank" class="product-link">
+                            <span>ai-seller.shtikoff.ru</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <p class="spoiler-conclusion">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/sparkles_2728.png" alt="sparkles" class="emoji-3d small inline-emoji">
+                    Так родился мой сервис
+                </p>
+            </div>
+        </section>
+
+        <!-- Share experience -->
+        <section class="slide" data-slide="6">
+            <div class="slide-content share-slide">
+                <div class="share-header">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/handshake_1f91d.png" alt="handshake" class="emoji-3d large">
+                    <h2>Хочу поделиться опытом</h2>
+                    <p class="share-subtitle">Этот спич будет полезен всем</p>
+                </div>
+                
+                <div class="audience-tags">
+                    <span class="audience-tag dev">👨‍💻 Разработчикам</span>
+                    <span class="audience-tag business">💼 Бизнесу</span>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-icon">⚡</span>
+                        <h4>Ускорить</h4>
+                        <p>Разработка быстрее в разы</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="benefit-icon">✨</span>
+                        <h4>Качество</h4>
+                        <p>Меньше багов, лучше код</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="benefit-icon">📋</span>
+                        <h4>Снизить риски</h4>
+                        <p>Документация проекта</p>
+                    </div>
+                    <div class="benefit-card bonus">
+                        <span class="benefit-icon">🎁</span>
+                        <h4>Бонус</h4>
+                        <p>ИИ-помощник знает весь проект — просто спроси!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stage 1: Planning -->
+        <section class="slide" data-slide="7">
+            <div class="slide-content stage-slide">
+                <div class="stage-header">
+                    <span class="stage-number">Этап 1</span>
+                    <h2>С чего я начал</h2>
+                </div>
+                
+                <div class="stage-icon">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/memo_1f4dd.png" alt="memo" class="emoji-3d large">
+                </div>
+                
+                <h3 class="stage-subtitle">Полная проработка "на бумаге"</h3>
+                
+                <div class="planning-items">
+                    <div class="planning-item">
+                        <span class="planning-icon">📝</span>
+                        <span class="planning-text">Описание проекта</span>
+                    </div>
+                    <div class="planning-item">
+                        <span class="planning-icon">🧩</span>
+                        <span class="planning-text">Декомпозиция</span>
+                    </div>
+                    <div class="planning-item">
+                        <span class="planning-icon">📋</span>
+                        <span class="planning-text">Сбор требований</span>
+                    </div>
+                    <div class="planning-item">
+                        <span class="planning-icon">🎯</span>
+                        <span class="planning-text">Описание задачи</span>
+                    </div>
+                    <div class="planning-item">
+                        <span class="planning-icon">✅</span>
+                        <span class="planning-text">Definition of Done</span>
+                    </div>
+                </div>
+                
+                <p class="stage-note">Прежде чем писать код — нужно понять что делаем</p>
+            </div>
+        </section>
+
+        <!-- Emphasis: Good TZ -->
+        <section class="slide" data-slide="8">
+            <div class="slide-content emphasis-slide">
+                <div class="attention-badge business-attention">
+                    <span class="attention-icon">💼</span>
+                    <span class="attention-text">Бизнес, внимание!</span>
+                </div>
+                <div class="emphasis-content">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/check-mark-button_2705.png" alt="check" class="emoji-3d large">
+                    <h2 class="emphasis-title">Да-да, я хорошо проработал ТЗ</h2>
+                    <p class="emphasis-subtitle">И это важно</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why TZ is important today -->
+        <section class="slide" data-slide="9">
+            <div class="slide-content why-slide">
+                <h2 class="section-title">Почему это особенно важно сегодня?</h2>
+                
+                <div class="why-cards">
+                    <div class="why-card">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/robot_1f916.png" alt="robot" class="emoji-3d medium">
+                        <h4>Нейросети</h4>
+                        <p>Работают по ТЗ <strong>глубоко и точно</strong></p>
+                    </div>
+                    <div class="why-card">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/technologist_1f9d1-200d-1f4bb.png" alt="dev" class="emoji-3d medium">
+                        <h4>Разработчики</h4>
+                        <p>Тоже работают по ТЗ 😉</p>
+                    </div>
+                </div>
+                
+                <div class="why-warning-card">
+                    <span class="why-warning-icon">⚠️</span>
+                    <div class="why-warning-content">
+                        <h4>Плохое ТЗ = "глухой телефон"</h4>
+                        <p>Результат будет не тем, что ожидали</p>
+                    </div>
+                </div>
+                
+                <p class="why-conclusion">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/direct-hit_1f3af.png" alt="target" class="emoji-3d small inline-emoji">
+                    ТЗ — это главное, на чём нужно сосредоточиться
+                </p>
+            </div>
+        </section>
+
+        <!-- What's next questions -->
+        <section class="slide" data-slide="10">
+            <div class="slide-content questions-slide">
+                <h2 class="section-title">Ну и что дальше?</h2>
+                <p class="questions-intro">Вот у меня есть хорошо проработанное ТЗ...</p>
+                
+                <div class="questions-list">
+                    <div class="question-card">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png" alt="rocket" class="emoji-3d medium">
+                        <h4>Где же ускорение?</h4>
+                    </div>
+                    <div class="question-card">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/gem-stone_1f48e.png" alt="gem" class="emoji-3d medium">
+                        <h4>Почему это может быть качественнее?</h4>
+                    </div>
+                    <div class="question-card highlight">
+                        <img src="https://em-content.zobj.net/source/microsoft-teams/363/thinking-face_1f914.png" alt="thinking" class="emoji-3d medium">
+                        <h4>Могут ли ИИ нас заменить, имея хорошо проработанное ТЗ?</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer decomposition -->
+        <section class="slide" data-slide="11">
+            <div class="slide-content decompose-slide">
+                <div class="decompose-header">
+                    <div class="attention-badge dev-attention">
+                        <span class="attention-icon">👨‍💻</span>
+                        <span class="attention-text">Разработчики, внимание!</span>
+                    </div>
+                    <h2>🧩 Декомпозиция задачи бизнеса на технические слои</h2>
+                </div>
+                
+                <div class="decompose-steps">
+                    <div class="decompose-step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Что необходимо сделать</h4>
+                            <p>Контроллеры, команды, слои архитектуры</p>
+                        </div>
+                    </div>
+                    <div class="decompose-step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Разделить на этапы</h4>
+                            <p>Последовательность разработки</p>
+                        </div>
+                    </div>
+                    <div class="decompose-step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4>Подготовить код</h4>
+                            <p>Создать файлы и структуру проекта</p>
+                        </div>
+                    </div>
+                    <div class="decompose-step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h4>Реализовать бизнес-логику</h4>
+                            <p>Написать основной функционал</p>
+                        </div>
+                    </div>
+                    <div class="decompose-step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4>Сгенерировать документацию</h4>
+                            <p>Swagger, человекопонятное описание</p>
+                        </div>
+                    </div>
+                    <div class="decompose-step">
+                        <span class="step-number">6</span>
+                        <div class="step-content">
+                            <h4>Сгенерировать тесты</h4>
+                            <p>Проверка кода и поддержание качества</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Realization slide -->
+        <section class="slide" data-slide="12">
+            <div class="slide-content realization-slide">
+                <h2 class="section-title">💡 Я кажется понял...</h2>
+                
+                <div class="realization-main">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/musical-score_1f3bc.png" alt="conductor" class="emoji-3d large">
+                    <h3>Дирижировать быстрее, чем писать самому</h3>
+                </div>
+                
+                <p class="realization-results">
+                    ✅ Ускорились · ✅ Тесты · ✅ Документация
+                </p>
+                
+                <p class="realization-but">Но... <strong>🤔 зачем тут разработчик?</strong></p>
+            </div>
+        </section>
+
+        <!-- Answer: why developer -->
+        <section class="slide" data-slide="13">
+            <div class="slide-content answer-slide">
+                <h2 class="section-title">👨‍💻 Зачем тут разработчик?</h2>
+                
+                <div class="answer-main">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/man-technologist_1f468-200d-1f4bb.png" alt="developer" class="emoji-3d large">
+                    <h3>Не просто дирижировать, а <em>правильно</em> дирижировать</h3>
+                </div>
+                
+                <div class="answer-points">
+                    <div class="answer-point">
+                        <span class="point-icon">🎓</span>
+                        <div class="point-content">
+                            <h4>Нужны компетенции</h4>
+                            <p>Понимание архитектуры, паттернов, best practices</p>
+                        </div>
+                    </div>
+                    <div class="answer-point">
+                        <span class="point-icon">🔍</span>
+                        <div class="point-content">
+                            <h4>Проверять качество</h4>
+                            <p>Контроль того, что выдаёт ИИ-агент</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary slide -->
+        <section class="slide" data-slide="14">
+            <div class="slide-content summary-slide">
+                <h2 class="section-title">🎯 Итого</h2>
+                
+                <div class="formula">
+                    <span class="formula-item">🤖 ИИ</span>
+                    <span class="formula-sign">+</span>
+                    <span class="formula-item">👨‍💻 Разработчик</span>
+                    <span class="formula-sign">+</span>
+                    <span class="formula-item">📋 Правильный подход</span>
+                    <span class="formula-sign">=</span>
+                </div>
+                
+                <div class="summary-results">
+                    <div class="summary-item">
+                        <span>⚡</span> Ускорение в разы
+                    </div>
+                    <div class="summary-item">
+                        <span>✨</span> Качественный код
+                    </div>
+                    <div class="summary-item">
+                        <span>🧪</span> Тесты из коробки
+                    </div>
+                    <div class="summary-item">
+                        <span>📝</span> Документация
+                    </div>
+                    <div class="summary-item">
+                        <span>🎁</span> ИИ-помощник по проекту
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to AI Seller -->
+        <section class="slide" data-slide="15">
+            <div class="slide-content back-slide">
+                <img src="https://em-content.zobj.net/source/microsoft-teams/363/ewe_1f411.png" alt="sheep" class="emoji-3d large">
+                <h2 class="back-title">
+                    Вернёмся к нашим <span class="strikethrough">баранам</span> <span class="correction">AI Seller</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- Design generation -->
+        <section class="slide" data-slide="16">
+            <div class="slide-content design-slide">
+                <div class="design-note">
+                    <span>💡</span> Сейчас больше про разработку, но кратко о дизайне...
+                </div>
+                
+                <h2 class="section-title">🎨 Дизайн за пару часов</h2>
+                
+                <div class="design-flow">
+                    <div class="design-step">
+                        <span class="design-step-num">1</span>
+                        <span class="design-step-icon">🔍</span>
+                        <p>Нашёл референсы в интернете</p>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="design-step">
+                        <span class="design-step-num">2</span>
+                        <span class="design-step-icon">🤖</span>
+                        <p>Сгенерировал дизайн по ним</p>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="design-step">
+                        <span class="design-step-num">3</span>
+                        <span class="design-step-icon">✏️</span>
+                        <p>Поправил под себя</p>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="design-step highlight">
+                        <span class="design-step-num">✓</span>
+                        <span class="design-step-icon">📐</span>
+                        <p>Готовый Figma-дизайн</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frontend development -->
+        <section class="slide" data-slide="17">
+            <div class="slide-content dev-steps-slide">
+                <div class="attention-badge frontend-attention">
+                    <span class="attention-icon">🖥️</span>
+                    <span class="attention-text">Фронтендеры, внимание!</span>
+                </div>
+                
+                <h2 class="section-title">Подготовил проект</h2>
+                
+                <div class="dev-steps-grid">
+                    <div class="dev-step">
+                        <span class="dev-step-num">1</span>
+                        <span>Выбрал стек</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">2</span>
+                        <span>Выбрал библиотеки</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">3</span>
+                        <span>Выбрал UI-фреймворк</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">4</span>
+                        <span>Проработал архитектуру</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">5</span>
+                        <span>Выгрузил из Figma → вёрстка</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">6</span>
+                        <span>Логика на фикстурах</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">7</span>
+                        <span>Сгенерировал тесты</span>
+                    </div>
+                    <div class="dev-step">
+                        <span class="dev-step-num">8</span>
+                        <span>Сгенерировал документацию</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backend development -->
+        <section class="slide" data-slide="18">
+            <div class="slide-content dev-steps-slide">
+                <div class="attention-badge backend-attention">
+                    <span class="attention-icon">⚙️</span>
+                    <span class="attention-text">Бэкендеры, внимание!</span>
+                </div>
+                
+                <h2 class="section-title">Подготовил проект</h2>
+                
+                <div class="dev-steps-grid">
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">1</span>
+                        <span>Выбрал стек</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">2</span>
+                        <span>Собрал всё в Docker</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">3</span>
+                        <span>Проработал архитектуру</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">4</span>
+                        <span>Логика по документации</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">5</span>
+                        <span>Сгенерировал тесты</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">6</span>
+                        <span>Сгенерировал документацию</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">7</span>
+                        <span>Сгенерировал Swagger</span>
+                    </div>
+                    <div class="dev-step backend">
+                        <span class="dev-step-num backend">8</span>
+                        <span>Реализовал админ-панель</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary: approach -->
+        <section class="slide" data-slide="19">
+            <div class="slide-content approach-slide">
+                <h2 class="section-title">📌 Закрепляем</h2>
+                
+                <div class="approach-steps">
+                    <div class="approach-step">
+                        <span class="approach-num">1</span>
+                        <h4>Определяем стек и зависимости</h4>
+                    </div>
+                    <div class="approach-row">
+                        <span class="approach-arrow">↓</span>
+                    </div>
+                    <div class="approach-step">
+                        <span class="approach-num">2</span>
+                        <h4>Собираем проект</h4>
+                    </div>
+                    <div class="approach-row">
+                        <span class="approach-arrow">↓</span>
+                    </div>
+                    <div class="approach-step">
+                        <span class="approach-num">3</span>
+                        <h4>Готовим архитектуру под наше видение</h4>
+                    </div>
+                    <div class="approach-row">
+                        <span class="approach-arrow">↓</span>
+                    </div>
+                    <div class="approach-step">
+                        <span class="approach-num">4</span>
+                        <h4>Реализуем логику на готовых рельсах</h4>
+                    </div>
+                    <div class="approach-row">
+                        <span class="approach-arrow">↓</span>
+                    </div>
+                    <div class="approach-step">
+                        <span class="approach-num">5</span>
+                        <h4>Генерируем тесты + документацию</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review slide -->
+        <section class="slide" data-slide="20">
+            <div class="slide-content review-slide">
+                <h2 class="section-title">🔍 Тестируем и ревьювим</h2>
+                
+                <div class="review-main">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/warning_26a0-fe0f.png" alt="warning" class="emoji-3d large">
+                    <h3>Особенно внимательно, потому что код писал ИИ</h3>
+                </div>
+                
+                <div class="review-points">
+                    <div class="review-point">
+                        <span>🧪</span>
+                        <p>Прогнать все тесты</p>
+                    </div>
+                    <div class="review-point">
+                        <span>👀</span>
+                        <p>Внимательно проревьювить логику</p>
+                    </div>
+                    <div class="review-point">
+                        <span>🐛</span>
+                        <p>Проверить edge-cases</p>
+                    </div>
+                    <div class="review-point">
+                        <span>✅</span>
+                        <p>Убедиться, что всё работает как задумано</p>
+                    </div>
+                </div>
+                
+                <p class="review-conclusion">Доверяй, но проверяй!</p>
+            </div>
+        </section>
+
+        <!-- Tips slide -->
+        <section class="slide" data-slide="21">
+            <div class="slide-content tips-slide">
+                <h2 class="section-title">💡 Советы</h2>
+                
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <span class="tip-num">1</span>
+                        <h4>Декомпозируем</h4>
+                    </div>
+                    <div class="tips-arrow">↓</div>
+                    <div class="tip-item">
+                        <span class="tip-num">2</span>
+                        <h4>Приоритизируем</h4>
+                    </div>
+                    <div class="tips-arrow">↓</div>
+                    <div class="tip-item important">
+                        <span class="tip-num">3</span>
+                        <h4>Идём маленькими и ясными шагами</h4>
+                        <span class="tip-badge">Очень важно!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter: Numbers -->
+        <section class="slide" data-slide="22">
+            <div class="slide-content chapter-slide">
+                <img src="https://em-content.zobj.net/source/microsoft-teams/363/bar-chart_1f4ca.png" alt="chart" class="emoji-3d xlarge">
+                <h1 class="chapter-title">Цифры и замеры</h1>
+            </div>
+        </section>
+
+        <!-- Demo slide - features -->
+        <section class="slide" data-slide="23">
+            <div class="slide-content features-slide">
+                <h2 class="section-title">🚀 Что реализовано в AI Seller</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span>🔧</span> Админка
+                    </div>
+                    <div class="feature-item">
+                        <span>👤</span> Клиент для пользователей
+                    </div>
+                    <div class="feature-item">
+                        <span>🤖</span> Настройки LLM моделей
+                    </div>
+                    <div class="feature-item">
+                        <span>📱</span> Интеграция с Telegram
+                    </div>
+                    <div class="feature-item">
+                        <span>🧠</span> RAG (база знаний)
+                    </div>
+                    <div class="feature-item">
+                        <span>🔐</span> Авторизация через Google
+                    </div>
+                    <div class="feature-item">
+                        <span>🌐</span> Лендинг
+                    </div>
+                    <div class="feature-item">
+                        <span>👥</span> Саблогин
+                    </div>
+                </div>
+                
+                <div class="features-flow">
+                    <p>Регистрация → Добавить бота → Настроить ИИ → Подключить группу → Собирать заявки!</p>
+                </div>
+                
+                <a href="https://ai-seller.shtikoff.ru" target="_blank" class="demo-link">
+                    ai-seller.shtikoff.ru
+                </a>
+            </div>
+        </section>
+
+        <!-- Metric: Speed -->
+        <section class="slide" data-slide="24">
+            <div class="slide-content metric-slide">
+                <h2 class="section-title">⏱️ Скорость</h2>
+                
+                <div class="metric-comparison">
+                    <div class="metric-card bad">
+                        <span class="metric-label">Без ИИ</span>
+                        <span class="metric-value">~2 месяца</span>
+                        <span class="metric-detail">60+ дней работы</span>
+                    </div>
+                    <div class="metric-vs">→</div>
+                    <div class="metric-card good">
+                        <span class="metric-label">С ИИ</span>
+                        <span class="metric-value">~7 дней</span>
+                        <span class="metric-detail">От идеи до прода</span>
+                    </div>
+                </div>
+                
+                <p class="metric-result">Ускорение в <strong>8 раз</strong></p>
+            </div>
+        </section>
+
+        <!-- Metric: Documentation -->
+        <section class="slide" data-slide="26">
+            <div class="slide-content metric-slide">
+                <h2 class="section-title">📝 Документация</h2>
+                
+                <div class="metric-comparison">
+                    <div class="metric-card bad">
+                        <span class="metric-label">Без ИИ</span>
+                        <span class="metric-value">0%</span>
+                        <span class="metric-detail">Лень, нет времени</span>
+                    </div>
+                    <div class="metric-vs">→</div>
+                    <div class="metric-card good">
+                        <span class="metric-label">С ИИ</span>
+                        <span class="metric-value">100%</span>
+                        <span class="metric-detail">Swagger + описания</span>
+                    </div>
+                </div>
+                
+                <p class="metric-result">Полная документация <strong>бесплатно</strong></p>
+            </div>
+        </section>
+
+        <!-- Metric: Tests -->
+        <section class="slide" data-slide="27">
+            <div class="slide-content metric-slide">
+                <h2 class="section-title">🧪 Тесты</h2>
+                
+                <div class="metric-comparison">
+                    <div class="metric-card bad">
+                        <span class="metric-label">Без ИИ</span>
+                        <span class="metric-value">0%</span>
+                        <span class="metric-detail">Некогда писать</span>
+                    </div>
+                    <div class="metric-vs">→</div>
+                    <div class="metric-card good">
+                        <span class="metric-label">С ИИ</span>
+                        <span class="metric-value">80%+</span>
+                        <span class="metric-detail">Покрытие кода</span>
+                    </div>
+                </div>
+                
+                <p class="metric-result">Тесты генерируются <strong>автоматически</strong></p>
+            </div>
+        </section>
+
+        <!-- Metric: Quality -->
+        <section class="slide" data-slide="28">
+            <div class="slide-content metric-slide">
+                <h2 class="section-title">✨ Качество кода</h2>
+                
+                <div class="metric-comparison">
+                    <div class="metric-card bad">
+                        <span class="metric-label">Без ИИ</span>
+                        <span class="metric-value">🎲</span>
+                        <span class="metric-detail">Как получится</span>
+                    </div>
+                    <div class="metric-vs">→</div>
+                    <div class="metric-card good">
+                        <span class="metric-label">С ИИ</span>
+                        <span class="metric-value">📏</span>
+                        <span class="metric-detail">Консистентный стиль</span>
+                    </div>
+                </div>
+                
+                <p class="metric-result">Единый стиль + <strong>best practices</strong></p>
+            </div>
+        </section>
+
+        <!-- Metric: AI Assistant -->
+        <section class="slide" data-slide="29">
+            <div class="slide-content metric-slide">
+                <h2 class="section-title">🎁 ИИ-помощник</h2>
+                
+                <div class="metric-comparison">
+                    <div class="metric-card bad">
+                        <span class="metric-label">Без ИИ</span>
+                        <span class="metric-value">—</span>
+                        <span class="metric-detail">Ищи сам в коде</span>
+                    </div>
+                    <div class="metric-vs">→</div>
+                    <div class="metric-card good">
+                        <span class="metric-label">С ИИ</span>
+                        <span class="metric-value">🤖</span>
+                        <span class="metric-detail">Знает весь проект</span>
+                    </div>
+                </div>
+                
+                <p class="metric-result">Просто спроси — <strong>получи ответ</strong></p>
+            </div>
+        </section>
+
+        <!-- Admin panel generation -->
+        <section class="slide" data-slide="30">
+            <div class="slide-content metric-slide">
+                <h2 class="section-title">🔧 Админка</h2>
+                
+                <div class="metric-comparison">
+                    <div class="metric-card bad">
+                        <span class="metric-label">Вручную</span>
+                        <span class="metric-value">📅</span>
+                        <span class="metric-detail">Дни работы</span>
+                    </div>
+                    <div class="metric-vs">→</div>
+                    <div class="metric-card good">
+                        <span class="metric-label">С ИИ</span>
+                        <span class="metric-value">⚡</span>
+                        <span class="metric-detail">Генерируется автоматически</span>
+                    </div>
+                </div>
+                
+                <p class="metric-result">CRUD, фильтры, поиск — <strong>из коробки</strong></p>
+            </div>
+        </section>
+
+        <!-- TZ benefits -->
+        <section class="slide" data-slide="31">
+            <div class="slide-content tz-slide">
+                <h2 class="section-title">📋 Проработанное ТЗ</h2>
+                
+                <div class="tz-main">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/locked_1f512.png" alt="lock" class="emoji-3d large">
+                    <h3>Обязательный этап, который не обойти</h3>
+                </div>
+                
+                <div class="tz-benefits">
+                    <div class="tz-benefit">
+                        <span>✅</span> Меньше мискоммуникации
+                    </div>
+                    <div class="tz-benefit">
+                        <span>✅</span> Все понимают задачу одинаково
+                    </div>
+                    <div class="tz-benefit">
+                        <span>✅</span> Согласовано до начала работы
+                    </div>
+                </div>
+                
+                <div class="tz-bonus">
+                    <span>🎁</span>
+                    <p>ТЗ тоже можно прорабатывать с ИИ!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo AI Agent -->
+        <section class="slide" data-slide="32">
+            <div class="slide-content agent-slide">
+                <h2 class="section-title">🎁 Бонус: ИИ-помощник по проекту</h2>
+                
+                <div class="agent-info">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/robot_1f916.png" alt="robot" class="emoji-3d large">
+                    <h3>Eva | AI Seller</h3>
+                    <p>ИИ-агент, который знает всю документацию сервиса</p>
+                </div>
+                
+                <div class="agent-features">
+                    <div class="agent-feature">
+                        <span>📚</span> Знает документацию
+                    </div>
+                    <div class="agent-feature">
+                        <span>💬</span> Отвечает на вопросы
+                    </div>
+                    <div class="agent-feature">
+                        <span>🚀</span> Реализован через AI Seller
+                    </div>
+                </div>
+                
+                <div class="telegram-block">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/eva_ai_seller_shtikoff_bot" alt="QR Code" class="qr-code">
+                    <a href="https://t.me/eva_ai_seller_shtikoff_bot" target="_blank" class="telegram-link">
+                        <span>📱</span> @eva_ai_seller_shtikoff_bot
+                    </a>
+                </div>
+                
+                <p class="agent-note">Попробуйте прямо сейчас!</p>
+            </div>
+        </section>
+
+        <!-- Recall questions -->
+        <section class="slide" data-slide="33">
+            <div class="slide-content recall-slide">
+                <h2 class="section-title">🤔 Помните эти вопросы?</h2>
+                
+                <div class="recall-questions">
+                    <div class="recall-question">Программист — вымирающий вид? 🦖</div>
+                    <div class="recall-question">Нас всех заменят? 😱</div>
+                    <div class="recall-question">Junior — всё? ⚰️</div>
+                    <div class="recall-question">ИИ пишет код лучше? 🤖</div>
+                    <div class="recall-question">Паниковать или адаптироваться? 🤔</div>
+                </div>
+                
+                <p class="recall-note">Давайте ответим на них</p>
+            </div>
+        </section>
+
+        <!-- Answer 1: Dying species -->
+        <section class="slide" data-slide="34">
+            <div class="slide-content answer-simple-slide">
+                <div class="question-box">
+                    <span class="q-icon">❓</span>
+                    <h3>Программист — вымирающий вид? 🦖</h3>
+                </div>
+                
+                <p class="simple-answer">
+                    😄 Ещё нет... но скоро мы будем вспоминать, как когда-то писали код самостоятельно — и смеяться над этим
+                </p>
+                
+                <p class="simple-note">
+                    🧬 Мы стоим на пороге <strong>эволюции</strong> программистов
+                </p>
+            </div>
+        </section>
+
+        <!-- Answer 2: Replace us -->
+        <section class="slide" data-slide="35">
+            <div class="slide-content answer-simple-slide">
+                <div class="question-box">
+                    <span class="q-icon">❓</span>
+                    <h3>Нас всех заменят? 😱</h3>
+                </div>
+                
+                <p class="simple-answer">
+                    🤔 Чисто технически — да, это возможно, но через этап эволюции
+                </p>
+                
+                <p class="simple-note">
+                    🎼 А сегодня программист эволюционирует в <strong>дирижёра</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Why not ready to replace -->
+        <section class="slide" data-slide="36">
+            <div class="slide-content why-not-slide">
+                <h2 class="section-title">Почему ещё не готовы заменить?</h2>
+                
+                <div class="why-not-list">
+                    <div class="why-not-item">
+                        <span>🏗️</span>
+                        <p>Нужны компетенции в <strong>архитектуре</strong></p>
+                    </div>
+                    <div class="why-not-item">
+                        <span>⚡</span>
+                        <p>Опыт работы с <strong>высокой нагрузкой</strong></p>
+                    </div>
+                    <div class="why-not-item">
+                        <span>🔭</span>
+                        <p><strong>Широкий взгляд</strong> на технологии</p>
+                    </div>
+                    <div class="why-not-item">
+                        <span>👁️</span>
+                        <p><strong>Надзиратель</strong>, который направит ИИ в нужную сторону</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Answer 3: Junior -->
+        <section class="slide" data-slide="37">
+            <div class="slide-content answer-simple-slide">
+                <div class="question-box">
+                    <span class="q-icon">❓</span>
+                    <h3>Junior — всё? ⚰️</h3>
+                </div>
+                
+                <p class="simple-answer">
+                    🤖 Да, роль джуна ИИ уже полностью выполняет
+                </p>
+                
+                <p class="simple-note">
+                    🧬 Но новые разработчики будут — в <strong>новом формате эволюции</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Answer 4: AI writes better -->
+        <section class="slide" data-slide="38">
+            <div class="slide-content answer-simple-slide">
+                <div class="question-box">
+                    <span class="q-icon">❓</span>
+                    <h3>ИИ пишет код лучше? 🤖</h3>
+                </div>
+                
+                <p class="simple-answer">
+                    ✅ Чаще да, чем нет — плохой код скорее исключение
+                </p>
+                
+                <p class="simple-note">
+                    🎯 Главное верно направлять — это и есть <strong>промпт-инжиниринг</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Answer 5: Panic or adapt -->
+        <section class="slide" data-slide="39">
+            <div class="slide-content answer-simple-slide">
+                <div class="question-box">
+                    <span class="q-icon">❓</span>
+                    <h3>Паниковать или адаптироваться? 🤔</h3>
+                </div>
+                
+                <p class="simple-answer">
+                    🚀 Адаптироваться! Паника — худший советчик
+                </p>
+                
+                <p class="simple-note">
+                    💪 Кто адаптируется первым — тот <strong>выигрывает</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Message to business -->
+        <section class="slide" data-slide="40">
+            <div class="slide-content business-message-slide">
+                <div class="attention-badge business-attention">
+                    <span class="attention-icon">💼</span>
+                    <span class="attention-text">Бизнес, внимание!</span>
+                </div>
+                
+                <div class="business-message">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png" alt="rocket" class="emoji-3d large">
+                    <h2>Чем раньше перестроимся на новые рельсы —</h2>
+                    <h2 class="highlight-text">тем дальше будем впереди всех!</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You -->
+        <section class="slide" data-slide="41">
+            <div class="slide-content thank-you-slide">
+                <div class="thank-you-content">
+                    <img src="https://em-content.zobj.net/source/microsoft-teams/363/party-popper_1f389.png" alt="party" class="emoji-3d large floating">
+                    <h1>Спасибо за внимание!</h1>
+                    <div class="contact-info">
+                        <p>Константин Штыков</p>
+                        <p>CARBOX</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-controls">
+        <button class="nav-btn prev" aria-label="Предыдущий слайд">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <div class="slide-counter">
+            <span class="current">1</span>
+            <span class="separator">/</span>
+            <span class="total">8</span>
+        </div>
+        <button class="nav-btn next" aria-label="Следующий слайд">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Slide Dots -->
+    <div class="slide-dots">
+        <button class="dot active" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+        <button class="dot" data-slide="3"></button>
+        <button class="dot" data-slide="4"></button>
+        <button class="dot" data-slide="5"></button>
+        <button class="dot" data-slide="6"></button>
+        <button class="dot" data-slide="7"></button>
+        <button class="dot" data-slide="8"></button>
+        <button class="dot" data-slide="9"></button>
+        <button class="dot" data-slide="10"></button>
+        <button class="dot" data-slide="11"></button>
+        <button class="dot" data-slide="12"></button>
+        <button class="dot" data-slide="13"></button>
+        <button class="dot" data-slide="14"></button>
+        <button class="dot" data-slide="15"></button>
+        <button class="dot" data-slide="16"></button>
+        <button class="dot" data-slide="17"></button>
+        <button class="dot" data-slide="18"></button>
+        <button class="dot" data-slide="19"></button>
+        <button class="dot" data-slide="20"></button>
+        <button class="dot" data-slide="21"></button>
+        <button class="dot" data-slide="22"></button>
+        <button class="dot" data-slide="23"></button>
+        <button class="dot" data-slide="24"></button>
+        <button class="dot" data-slide="25"></button>
+        <button class="dot" data-slide="26"></button>
+        <button class="dot" data-slide="27"></button>
+        <button class="dot" data-slide="28"></button>
+        <button class="dot" data-slide="29"></button>
+        <button class="dot" data-slide="30"></button>
+        <button class="dot" data-slide="31"></button>
+        <button class="dot" data-slide="32"></button>
+        <button class="dot" data-slide="33"></button>
+        <button class="dot" data-slide="34"></button>
+        <button class="dot" data-slide="35"></button>
+        <button class="dot" data-slide="36"></button>
+        <button class="dot" data-slide="37"></button>
+        <button class="dot" data-slide="38"></button>
+        <button class="dot" data-slide="39"></button>
+        <button class="dot" data-slide="40"></button>
+        <button class="dot" data-slide="41"></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
